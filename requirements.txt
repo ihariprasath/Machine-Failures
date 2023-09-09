@@ -1,0 +1,3 @@
+tensorflow
+skicit-learn
+streamlit
