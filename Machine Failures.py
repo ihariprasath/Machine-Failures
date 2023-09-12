@@ -100,6 +100,9 @@ from tensorflow.keras.layers import Dense
 
 model=Sequential()
 #adding input layer
+model = Sequential()
+model.add(Dense(11, activation="relu", input_shape=(11,)))  # Input layer with 11 features
+# Add other layers as needed
 model.add(Dense(11,activation="relu"))
 #adding hidden layers
 model.add(Dense(1600,activation="relu"))
