@@ -193,6 +193,8 @@ if st.button('Predict'):
     # Create a DataFrame with the input data
     input_data = pd.DataFrame({'Type': [type], 'Parameter 1': [param1], 'Parameter 2': [param2]})
     # Call the predict function with the input data
+    input_data = input_data.astype('float32')  # Convert to float32
+
     predictions = predict(input_data)
     
     # Display the prediction results
