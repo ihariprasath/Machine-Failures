@@ -183,7 +183,6 @@ st.title('Machine Failure Prediction')
 
 # Create input fields for machine parameters
 st.write('Enter Machine Parameters:')
-type = st.selectbox('Type', ['Type 1', 'Type 2', 'Type 3'])
 param1 = st.number_input('Parameter 1', min_value=0.0, max_value=1000.0)
 param2 = st.number_input('Parameter 2', min_value=0.0, max_value=1000.0)
 # Add more input fields for other parameters as needed
@@ -191,7 +190,7 @@ param2 = st.number_input('Parameter 2', min_value=0.0, max_value=1000.0)
 # Create a button to trigger predictions
 if st.button('Predict'):
     # Create a DataFrame with the input data
-    input_data = pd.DataFrame({'Type': [type], 'Parameter 1': [param1], 'Parameter 2': [param2]})
+    input_data = pd.DataFrame({'Parameter 1': [param1], 'Parameter 2': [param2]})
     # Call the predict function with the input data
     input_data = input_data.astype('float32')  # Convert to float32
 
