@@ -164,7 +164,7 @@ from tensorflow import keras
 
 # Load your trained model here
 # Example:
-# model = keras.models.load_model('your_model.h5')
+model = keras.models.load_model('model1.h5')
 
 # Function to make predictions
 def predict(machine_params):
