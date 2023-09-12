@@ -98,17 +98,29 @@ from tensorflow.keras.layers import Dense
 # In[18]:
 
 
-model=Sequential()
-#adding input layer
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+# Create a Sequential model
 model = Sequential()
-model.add(Dense(11, activation="relu", input_shape=(11,)))  # Input layer with 11 features
-# Add other layers as needed
-model.add(Dense(11,activation="relu"))
-#adding hidden layers
-model.add(Dense(1600,activation="relu"))
-model.add(Dense(200,activation="relu"))
-#adding output layer
-model.add(Dense(2,activation="softmax"))
+
+# Input Layer (11 features)
+model.add(Dense(11, activation="relu", input_shape=(11,)))
+
+# Hidden Layers
+model.add(Dense(11, activation="relu"))
+model.add(Dense(1600, activation="relu"))
+model.add(Dense(200, activation="relu"))
+
+# Output Layer (2 classes, softmax for classification)
+model.add(Dense(2, activation="softmax"))
+
+# Compile the model (add optimizer, loss function, and metrics)
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+
+# Display the model summary
+model.summary()
+
 
 
 # In[19]:
